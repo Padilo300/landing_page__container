@@ -1,0 +1,114 @@
+.first-section{
+    min-height: 100vh;
+    background: url('../img/bg/main.png');
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px){
+        background-size: cover;
+    }
+    .nav_and_logo{
+        height: 68px;
+        background-color: #fff;
+        padding: 30px 15px;
+        @media screen and (min-width: 768px){
+            
+            nav{
+                li{
+                    position: relative;
+                    &.active{
+                        &::after{
+                            display: block;
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 3px;
+                            background-color: $themeYellow;
+                            top: 43px;
+                        }
+                    }
+                    
+                    &:hover{
+                        &::after{
+                            display: block;
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 3px;
+                            background-color: $themeYellow;
+                            top: 43px;
+                        }   
+                    }
+                }
+            }
+        }
+        @media screen and (max-width:767px){
+            margin: 20px auto;
+        }
+       
+        .logo{
+            @media screen and (max-width:767px){
+                margin: 0 auto;
+            }
+        }
+    }
+    .lineInfo{
+        margin-top: 40px;
+        margin-bottom: 25px;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: space-between;
+        @media screen and (max-width: 992px){
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            @media screen and (max-width: 992px){
+                justify-content: center;
+                margin: 0 0 5px 0;
+            }
+            a{
+                color: #ffffff;
+                font-family: $themeFont;
+                font-size: 16px;
+                font-weight: 400;
+                @media screen and (max-width: 450px){
+                    font-size: 14px;
+                }
+            }
+            button{
+                width: 233px;
+                height: 39px;
+                background-color: #fbb700;
+                border: none;
+                color: #fff;
+                width: max-content;
+            }
+        }
+    }
+    .rightSide{
+        @media screen and (max-width:854px){
+            max-width: 100%;
+            flex: 100%;
+        }
+        img{
+            position: relative;
+            left: -153px;
+            top: 66px;
+            max-width: 365px;
+            @media screen and (max-width:854px){
+                position: static;
+                margin: 0 auto;
+                display: block;
+            }
+            @media screen and (max-width: 767px){
+                max-width: 100%;
+            }
+        }
+    }
+}
